@@ -14,6 +14,7 @@ public class Area {
         map.put("House", new House());
         map.put("CaveEntrance", new CaveEntrance());
         map.put("Lake", new Lake());
+        map.put("Graveyard", new Graveyard());
         return map;
     }
 

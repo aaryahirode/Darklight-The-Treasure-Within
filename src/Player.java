@@ -16,5 +16,7 @@ public class Player {
     public void addItem(String... item){
         this.inventory.addAll(new ArrayList<>(List.of(item)));
     }
-
+    public boolean hasItem(String item) {
+        return inventory.contains(item);
+    }
 }

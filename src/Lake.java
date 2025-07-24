@@ -3,7 +3,7 @@ import java.util.Map;
 
 public class Lake extends Area{
     private final String name = "Lake";
-    public static final String description = """
+    public final String description = """
         You stand at the edge of a quiet lake, its surface shimmering under a pale sky.
         The air is still, yet heavy with an unspoken tension.
         To the east, a weathered gate leads into an eerie graveyard cloaked in mist.
@@ -20,7 +20,6 @@ public class Lake extends Area{
     public Lake(){
         surroundings =new HashMap<>(3);
         surroundings.put('E', "GraveYard");
-        surroundings.put('S', "house");
         surroundings.put('W', "EastForest");
     }
 
