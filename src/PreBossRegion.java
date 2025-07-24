@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 public class PreBossRegion extends Area{
     private String name = "PreBossRegion";
     private String description = """
@@ -9,6 +12,13 @@ public class PreBossRegion extends Area{
             East → Fight Boss""";
 
 //    LET PLAYER ENTER. IF GOES WITHOUT SWORD THEN KILLED AND BACK TO CAVE ENTRANCE.
+private Map<Character, String> surroundings;
+
+    public PreBossRegion(){
+        surroundings =new HashMap<>(2);
+        surroundings.put('N', "CaveEntrance");
+        surroundings.put('E', "BossArea");
+    }
 
     boolean metNPC = false;
 
@@ -22,6 +32,7 @@ public class PreBossRegion extends Area{
     public String npcFirstDialogue(){
         metNPC = true;
         return """
+                Hi..i..Hiii.. I-I'm Knight Bernahl. The beast inside defeated and chained me as a warning for those who wish to trespass.
                 You dare face the beast beyond this door?
                 Foolish traveler… No mortal blade can harm it.
                 If you seek victory, you must climb the North Hill outside this cave.
