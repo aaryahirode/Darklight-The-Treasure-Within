@@ -3,7 +3,7 @@ import java.util.Map;
 
 public class EastForest extends Area{
     private final String name = "East Forest";
-    public final String description = """
+    private final String description = """
             You are in an open part of the forest.
             Sunlight filters through the tall pines, and you can just make out the lake glimmering to the east.
             A wide path runs south toward the road, while narrow trails lead west into darker woods.

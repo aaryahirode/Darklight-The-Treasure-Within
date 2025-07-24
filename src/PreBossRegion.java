@@ -10,12 +10,21 @@ public class PreBossRegion extends Area{
             Exits: NORTH → Deeper Tunnel, EAST → Fight Boss""";
 
 //    LET PLAYER ENTER. IF GOES WITHOUT SWORD THEN KILLED AND BACK TO CAVE ENTRANCE.
-private Map<Character, String> surroundings;
+    private Map<Character, String> surroundings;
 
     public PreBossRegion(){
         surroundings =new HashMap<>(2);
         surroundings.put('N', "CaveEntrance");
         surroundings.put('E', "BossArea");
+    }
+    public String getName(){
+        return name;
+    }
+    public String getDescription(){
+        return description;
+    }
+    public Map<Character, String> getMap(){
+        return surroundings;
     }
 
     boolean metNPC = false;

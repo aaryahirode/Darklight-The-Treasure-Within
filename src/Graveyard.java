@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Graveyard extends Area{
     private final String name = "Lake";
-    public final String description = """
+    private final String description = """
         You enter a crumbling graveyard shrouded in fog.
         Timeworn tombstones jut out from the earth like broken teeth, and the air grows colder with each step.
         Shadows dance between the graves, and the silence is thick—unnatural.
@@ -25,8 +25,8 @@ public class Graveyard extends Area{
     private final String key = "Cave Key";
 
     public Graveyard(){
-        surroundings =new HashMap<>(2);
-        surroundings.put('W', "EastForest");
+        surroundings =new HashMap<>(1);
+        surroundings.put('W', "Lake");
     }
 
     public String getName() {
@@ -55,7 +55,7 @@ public class Graveyard extends Area{
     @Override
     public String toString() {
         System.out.println(description);
-        if(received ==false){
+        if(!received){
             System.out.println(ghost);
             solve();
         }

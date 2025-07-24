@@ -3,7 +3,7 @@ import java.util.Map;
 
 public class WestForest extends Area {
     private final String name = "West Forest";
-    public final String description = """
+    private final String description = """
             You are in a dense, dark forest. The trees are tangled, and the ground is uneven.
             Paths lead east toward a lighter forest and south toward the northern slope of a hill.
             Exits: EAST → East Forest, SOUTH → North Hill""";
