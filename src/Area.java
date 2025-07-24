@@ -12,6 +12,7 @@ public class Area {
         map.put("EastForest", new EastForest());
         map.put("WestForest", new WestForest());
         map.put("House", new House());
+        map.put("CaveEntrance", new CaveEntrance());
         return map;
     }
 
