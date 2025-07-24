@@ -9,7 +9,6 @@ public class WestForest extends Area {
             Exits: EAST → East Forest, SOUTH → North Hill""";
     private Map<Character, String> surroundings;
     private boolean entered=false;
-    private String person = "person";
 
     public WestForest(){
         surroundings =new HashMap<>(2);

@@ -13,6 +13,7 @@ public class Area {
         map.put("WestForest", new WestForest());
         map.put("House", new House());
         map.put("CaveEntrance", new CaveEntrance());
+        map.put("Lake", new Lake());
         return map;
     }
 
