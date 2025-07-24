@@ -13,7 +13,7 @@ public class Valley extends Area{
     private Map<Character, String> surroundings;
 
     public Valley(){
-        surroundings =new HashMap<>(2);
+        surroundings =new HashMap<>(4);
         surroundings.put('N', "Road");
         surroundings.put('E', "Stream");
         surroundings.put('S', "Cave");

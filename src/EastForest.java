@@ -7,11 +7,11 @@ public class EastForest extends Area{
             You are in an open part of the forest.
             Sunlight filters through the tall pines, and you can just make out the lake glimmering to the east.
             A wide path runs south toward the road, while narrow trails lead west into darker woods.
-            Exits: WEST to West Forest, EAST to Lake and SOUTH to Road""";
+            Exits: WEST → West Forest, EAST → Lake, SOUTH → Road""";
     private Map<Character, String> surroundings;
 
     public EastForest(){
-        surroundings =new HashMap<>(2);
+        surroundings =new HashMap<>(3);
         surroundings.put('E', "Lake");
         surroundings.put('S', "Road");
         surroundings.put('W', "WestForest");

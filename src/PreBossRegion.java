@@ -7,9 +7,7 @@ public class PreBossRegion extends Area{
             You step into a damp, echoing chamber deep inside the cave.
             A flickering torch dimly lights the room, revealing a massive stone door sealed with strange runes.
             The air feels heavy with an ominous presence beyond.
-            Exits:
-            North → Deeper Tunnel
-            East → Fight Boss""";
+            Exits: NORTH → Deeper Tunnel, EAST → Fight Boss""";
 
 //    LET PLAYER ENTER. IF GOES WITHOUT SWORD THEN KILLED AND BACK TO CAVE ENTRANCE.
 private Map<Character, String> surroundings;

@@ -6,7 +6,7 @@ public class House extends Area{
     private String description = """
             You are inside a house.
             The only door leads back west to the road, though you see a faint trail heading south toward the stream.
-            Exits: WEST to Road, SOUTH to Stream""";
+            Exits: WEST → Road, SOUTH → Stream""";
     private Map<Character, String> surroundings;
 
     private boolean isLocked = true;

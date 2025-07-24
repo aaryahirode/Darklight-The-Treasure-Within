@@ -9,7 +9,7 @@ public class Road extends Area{
             To the south, a valley stretches out below.
             To the east, there’s a House.
             To the west, the path climbs toward a hill.
-            Exits: North to Forest, East to Well House, South to Valley and West to Hill""";
+            Exits: NORTH → Forest, EAST → House, SOUTH → Valley, WEST → Hill""";
     private Map<Character, String> surroundings;
 
     public Road(){
