@@ -34,7 +34,7 @@ public class Lake extends Area{
         return surroundings;
     }
     public String getBoat() {
-        return boatDialogue;
+        return boat;
     }
     @Override
     public String toString() {
