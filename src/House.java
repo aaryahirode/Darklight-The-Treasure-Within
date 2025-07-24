@@ -31,7 +31,7 @@ public class House extends Area{
     public void setLocked() {
         isLocked = false;
     }
-    public void setpickedItems() {
+    public void setPickedItems() {
         pickedItems = true;
     }
 
