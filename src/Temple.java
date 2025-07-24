@@ -9,7 +9,7 @@ public class Temple extends Area{
         The scent of incense lingers in the air, and ancient carvings line the pillars like silent watchers.
 
         At the far end of the hall, an old sage sits cross-legged atop a raised platform, surrounded by silence and wisdom.
-        Exits: SOUTH → Valley""";
+        Exits: SOUTH → West Forest""";
     private Map<Character, String> surroundings;
     private boolean metSage = false;
 
