@@ -4,12 +4,13 @@ import java.util.Map;
 public class House extends Area{
     private String name = "House";
     private String description = """
-            You are inside a house. There’s a table with a torch and some batteries.
+            You are inside a house.
             The only door leads back west to the road, though you see a faint trail heading south toward the stream.
             Exits: WEST to Road, SOUTH to Stream""";
     private Map<Character, String> surroundings;
 
     private boolean isLocked = true;
+    private boolean pickedItems = false;
 
     public House(){
         surroundings =new HashMap<>(2);
@@ -28,11 +29,21 @@ public class House extends Area{
     }
 
     public void setLocked() {
-        isLocked = true;
+        isLocked = false;
+    }
+    public void setpickedItems() {
+        pickedItems = true;
     }
 
     @Override
     public String toString() {
-        return description;
+        if(pickedItems){
+            return description;
+        }else{
+            return """
+            You are inside a house. There’s a table with a torch and some batteries.
+            The only door leads back west to the road, though you see a faint trail heading south toward the stream.
+            Exits: WEST to Road, SOUTH to Stream""";
+        }
     }
 }

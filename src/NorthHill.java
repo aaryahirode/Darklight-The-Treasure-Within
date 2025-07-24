@@ -46,8 +46,6 @@ public class NorthHill extends Area{
             }else{
                 return description;
             }
-        }else{
-            description = description + "\nWeapon already added in inventory";
         }
         return description;
     }

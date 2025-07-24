@@ -11,6 +11,7 @@ public class Area {
         map.put("Stream", new Stream());
         map.put("EastForest", new EastForest());
         map.put("WestForest", new WestForest());
+        map.put("House", new House());
         return map;
     }
 
