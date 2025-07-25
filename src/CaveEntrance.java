@@ -3,7 +3,7 @@ import java.util.Map;
 
 public class CaveEntrance extends Area{
 
-    private String name = "Cave";
+    private String name = "CaveEntrance";
     private String description = """
             You are in a small chamber just below the grate.
             Piles of loose rock and debris lie scattered around.
@@ -42,10 +42,10 @@ public class CaveEntrance extends Area{
     }
 
     public void setLocked() {
-        this.locked = true;
+        this.locked = false;
     }
     public void setTooDark() {
-        this.tooDark = true;
+        this.tooDark = false;
     }
     public void setHasSword(){
         this.hasSword = true;

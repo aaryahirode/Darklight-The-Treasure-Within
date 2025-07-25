@@ -9,14 +9,14 @@ public class Valley extends Area{
             West climbs the Southern Hill.
             South disappears into darker forest towards a cave.
             East follows the water toward the stream.
-            Exits: NORTH → Road, EAST → Stream, WEST → South Hill, SOUTH → South Forest""";
+            Exits: NORTH → Road, EAST → Stream, WEST → South Hill, SOUTH → Cave Entrance""";
     private Map<Character, String> surroundings;
 
     public Valley(){
         surroundings =new HashMap<>(4);
         surroundings.put('N', "Road");
         surroundings.put('E', "Stream");
-        surroundings.put('S', "Cave");
+        surroundings.put('S', "CaveEntrance");
         surroundings.put('W', "SouthHill");
     }
 

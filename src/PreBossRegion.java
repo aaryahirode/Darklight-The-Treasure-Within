@@ -9,7 +9,7 @@ public class PreBossRegion extends Area{
             The air feels heavy with an ominous presence beyond.
             In the corner, a chained helpless person sits slumped against the wall.
             His eyes glint faintly in the torchlight as he watches you approach.
-            Exits: NORTH → Deeper Tunnel, EAST → Fight Boss""";
+            Exits: NORTH → Cave Entrance, EAST → Fight Boss""";
     private Map<Character, String> surroundings;
 
     boolean metNPC = false;

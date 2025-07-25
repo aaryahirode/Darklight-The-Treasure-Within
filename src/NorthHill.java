@@ -34,7 +34,9 @@ public class NorthHill extends Area{
     public boolean isWeaponFound() {
         return weaponFound;
     }
-
+    public boolean isMetChainedMonster(){
+        return metChainedMonster;
+    }
     public void setMetChainedMonster() {
         metChainedMonster = true;
     }

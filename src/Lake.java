@@ -19,7 +19,7 @@ public class Lake extends Area{
 
     public Lake(){
         surroundings =new HashMap<>(2);
-        surroundings.put('E', "GraveYard");
+        surroundings.put('E', "Graveyard");
         surroundings.put('W', "EastForest");
     }
 

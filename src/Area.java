@@ -23,6 +23,7 @@ class AreaMap{
         map.put("Graveyard", new Graveyard());
         map.put("Temple", new Temple());
         map.put("Valley", new Valley());
+        map.put("PreBossRegion", new PreBossRegion());
     }
 
     public Area getArea(String name){
@@ -39,6 +40,7 @@ class AreaMap{
             case "graveyard" -> map.get("Graveyard");
             case "temple" -> map.get("Temple");
             case "valley" -> map.get("Valley");
+            case "prebossregion" -> map.get("PreBossRegion");
             default -> null;
         };
     }
@@ -59,7 +61,7 @@ class AreaMap{
         return (EastForest) getArea("eastforest");
     }
     public WestForest getWestForest(){
-        return (WestForest) getArea("westForest");
+        return (WestForest) getArea("westforest");
     }
     public House getHouse(){
         return (House) getArea("house");
@@ -78,5 +80,8 @@ class AreaMap{
     }
     public Valley getValley(){
         return (Valley) getArea("valley");
+    }
+    public PreBossRegion getPreBossRegion(){
+        return (PreBossRegion) getArea("PreBossRegion");
     }
 }
