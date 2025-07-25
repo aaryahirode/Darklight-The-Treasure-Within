@@ -43,6 +43,11 @@ public class House extends Area{
         pickedItems = true;
     }
 
+    public void addItems(Player player){
+        player.addItem("Torch", "Batteries", "Letter");
+        setPickedItems();
+    }
+
     public void readLetter(){
         System.out.println("""
                 HOPE YOU ARE ENJOYING OUR GAME!

@@ -42,13 +42,17 @@ public class NorthHill extends Area{
         this.weaponFound = true;
     }
 
+    public void addWeapon(Player player){
+        player.addItem(weapon);
+        setWeaponFound();
+    }
+
     @Override
     public String toString(){
         if(!weaponFound){
             if(metChainedMonster){
                 String descriptionCopy = description;
                 descriptionCopy = descriptionCopy + "\nWeapon Found: Soul Ripper(Sword)\nAdded the weapon to inventory";
-                weaponFound = true;
                 return descriptionCopy;
             }else{
                 return description;
