@@ -45,7 +45,7 @@ public class House extends Area{
 
     public void readLetter(){
         System.out.println("""
-                HOPE YOU ARE ENJOYING OUT GAME!
+                HOPE YOU ARE ENJOYING OUR GAME!
                 Creators:
                     ◉ Om Gupta (github → https://github.com/OmGupta1719)
                     ◉ Aarya Hirode (github → https://github.com/aaryahirode)""");

@@ -41,12 +41,16 @@ public class Graveyard extends Area{
     public boolean getReceived(){
         return received;
     }
+    public void addKey(Player player){
+        player.addItem(key);
+        received=true;
+    }
     public void solve(){
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter your answer: ");
         String input = scanner.nextLine();
         if (input.equalsIgnoreCase("apple")) {
-            received = true;
+            received=true;
             System.out.println("\nThe ghost nods silently and vanishes into the mist...");
         } else {
             System.out.println("\nThe ghost shrieks, 'That is not the answer!' and fades into the fog...");
