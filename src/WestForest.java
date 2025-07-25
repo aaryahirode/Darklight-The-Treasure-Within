@@ -31,12 +31,13 @@ public class WestForest extends Area {
         }
     }
     public void dialogue(){
-        System.out.println("The path you walk is clouded... but not without purpose.  \n" +
-                "You must go... to the temple...  \n" +
-                "There, the sage awaits you.  \n" +
-                "He knows the truths you seek—  \n" +
-                "and the path to what you wish to become.  \n" +
-                "Do not delay... your time is running thin.");
+        System.out.println("""
+                The path you walk is clouded... but not without purpose.
+                You must go... to the temple...
+                There, the sage awaits you.
+                He knows the truths you seek—
+                and the path to what you wish to become.
+                Do not delay... your time is running thin.""");
     }
     @Override
     public String toString() {

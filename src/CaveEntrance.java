@@ -2,6 +2,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CaveEntrance extends Area{
+
     private String name = "Cave";
     private String description = """
             You are in a small chamber just below the grate.
@@ -10,14 +11,15 @@ public class CaveEntrance extends Area{
             Exits: NORTH → Valley, SOUTH → Tunnel deeper into the cave""";
     private Map<Character, String> surroundings;
 
+    private boolean locked = true;
+    private boolean tooDark = true;
+    private boolean hasSword = false;
+
     public CaveEntrance(){
         surroundings =new HashMap<>(2);
         surroundings.put('N', "Valley");
         surroundings.put('S', "PreBossRegion");
     }
-
-    private boolean locked = true;
-    private boolean tooDark = true;
 
     public String getName() {
         return name;
@@ -25,31 +27,44 @@ public class CaveEntrance extends Area{
     public String getDescription() {
         return description;
     }
+    public Map<Character, String> getSurroundings() {
+        return surroundings;
+    }
+
     public boolean isLocked() {
         return locked;
+    }
+    public boolean isTooDark() {
+        return tooDark;
+    }
+    public boolean isHasSword() {
+        return hasSword;
     }
 
     public void setLocked() {
         this.locked = true;
     }
-    public boolean isTooDark() {
-        return tooDark;
-    }
     public void setTooDark() {
         this.tooDark = true;
+    }
+    public void setHasSword(){
+        this.hasSword = true;
     }
 
     @Override
     public String toString() {
         if(!locked && !tooDark){
-            return description;
+            if(!hasSword){
+                return description + "\nYou don't have a weapon yet moving ahead would be fatal";
+            }else{
+                return description;
+            }
         } else if (locked) {
             return this.locked();
         }else{
             return this.tooDark();
         }
     }
-
     public String locked(){
         return  """
                 You are standing before a large cave.
@@ -58,7 +73,6 @@ public class CaveEntrance extends Area{
                 The grate is locked, but you can see a narrow passage leading downward into the cave beyond.
                 You’ll need a key to unlock it.""";
     }
-
     public String tooDark(){
         return  """
                 You have unlocked the heavy iron grate.
@@ -70,6 +84,4 @@ public class CaveEntrance extends Area{
                 NORTH → Stream
                 DOWN → CANNOT ENTER. FIND A TORCH""";
     }
-
-
 }

@@ -7,11 +7,14 @@ public class PreBossRegion extends Area{
             You step into a damp, echoing chamber deep inside the cave.
             A flickering torch dimly lights the room, revealing a massive stone door sealed with strange runes.
             The air feels heavy with an ominous presence beyond.
+            In the corner, a chained helpless person sits slumped against the wall.
+            His eyes glint faintly in the torchlight as he watches you approach.
             Exits: NORTH → Deeper Tunnel, EAST → Fight Boss""";
-
-//    LET PLAYER ENTER. IF GOES WITHOUT SWORD THEN KILLED AND BACK TO CAVE ENTRANCE.
     private Map<Character, String> surroundings;
 
+    boolean metNPC = false;
+
+    //    LET PLAYER ENTER. IF GOES WITHOUT SWORD THEN KILLED AND BACK TO CAVE ENTRANCE.
     public PreBossRegion(){
         surroundings =new HashMap<>(2);
         surroundings.put('N', "CaveEntrance");
@@ -23,19 +26,32 @@ public class PreBossRegion extends Area{
     public String getDescription(){
         return description;
     }
-    public Map<Character, String> getMap(){
+    public Map<Character, String> getSurroundings() {
         return surroundings;
     }
 
-    boolean metNPC = false;
+    public boolean hasMetNPC() {
+        return metNPC;
+    }
+    public void setMetNPC() {
+        this.metNPC = true;
+    }
 
-    public String npcDialogue(){
+    public String npcDialogue(boolean hasSword){
         if(!metNPC){
             return npcFirstDialogue();
         }
-        return npcSecondDialogue();
+        if(hasSword){
+            return """
+                    “Ah… you’ve done it. You carry the Soul Ripper...
+                    Beyond that door lies its lair. Strike true, and do not falter... but beware—its soul is bound to the darkness.
+                    Also remember the Soul Ripper does not give life, it takes it. Every strike will feed it—and it will hunger for you next.
+                    If you survive, you may not leave this place the same.
+                    Even wounded, it will try to take you with it.""";
+        }else{
+            return npcSecondDialogue();
+        }
     }
-
     public String npcFirstDialogue(){
         metNPC = true;
         return """

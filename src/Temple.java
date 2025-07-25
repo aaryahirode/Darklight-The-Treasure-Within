@@ -36,10 +36,9 @@ public class Temple extends Area{
         metSage = true;
         return """
             The sage slowly opens his eyes and gazes at you with a calm, knowing look.
-
             'You’ve come far, seeker,' he says, his voice deep and steady.
-
             'Beyond the valley lies a cave — one that holds the treasure you seek.
+            
             But beware... no one who has entered its depths has ever returned.
             The cave does not yield to strength or fire. It opens only to the key...
             hidden deep within the graveyard beyond the lake.'
@@ -50,12 +49,11 @@ public class Temple extends Area{
     private String repeatSageDialogue() {
         return """
             The sage regards you once again with his quiet, timeless stare.
-
+            
             'The cave still waits,' he says softly.
             'And so does your fate, deep in the graveyard beyond the lake.'
-
             He nods solemnly.
-
+            
             'Return only when your heart carries both wisdom... and the key.'""";
     }
     @Override
