@@ -19,4 +19,9 @@ public class Player {
     public boolean hasItem(String item) {
         return inventory.contains(item);
     }
+
+    @Override
+    public String toString() {
+        return name + "\nInventory:\n" + inventory;
+    }
 }

@@ -1,6 +1,6 @@
 public class TestArea {
     public static void main(String[] args) {
-        var gameMap = Area.getArea();
+        var gameMap = new AreaMap().map;
         gameMap.forEach((key, value)-> System.out.println(value + "\nEND OF AREA: " + key + "\n"));
     }
 }
