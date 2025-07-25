@@ -14,6 +14,7 @@ public class WestForest extends Area {
         surroundings =new HashMap<>(2);
         surroundings.put('E', "EastForest");
         surroundings.put('S', "NorthHill");
+        surroundings.put('N', "Temple");
     }
     public String getName() {
         return name;

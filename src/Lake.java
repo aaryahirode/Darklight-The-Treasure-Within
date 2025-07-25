@@ -8,8 +8,8 @@ public class Lake extends Area{
         The air is still, yet heavy with an unspoken tension.
         To the east, a weathered gate leads into an eerie graveyard cloaked in mist.
         To the west, a dense forest stirs — the East Forest, whispering secrets between the trees.
-        To the south, a crooked house sits alone, half-sunken and forgotten.
-        Exits: EAST → Graveyard, WEST → East Forest, SOUTH → House""";
+        To the south, a wall of a crooked house sits alone, half-sunken and forgotten.
+        Exits: EAST → Graveyard, WEST → East Forest""";
     private Map<Character, String> surroundings;
     private final String boat = """
         A small, creaky boat rocks gently by the shore.

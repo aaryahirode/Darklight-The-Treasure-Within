@@ -13,19 +13,25 @@ public class GameControl{
     public static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        System.out.println("Enter your name: ");
-        String playerName = scanner.nextLine();
-        var game = startGame(playerName);
+//        PLAYER INFO PLUS GAME EXPLANATION
+        String playerName = "";
+        while(playerName.isEmpty()){
+            System.out.println("Enter your name: ");
+            playerName = scanner.nextLine();
+        }
+        playerName = String.valueOf(playerName.charAt(0)).toUpperCase() + playerName.substring(1).toLowerCase();
+        System.out.println("Hey " + playerName); // IDHAR ADD KAR
+//        PLAYER INTRO END
 
+        var game = startGame(playerName);
         var player = game.player;
         var map = game.map;
 
         Area current = map.getRoad();
-
+        System.out.println(current);
         System.out.println("Press Q to quit game.");
         Character input = 'A';
         while(input!='q'){
-            System.out.println(current);
             input = scanner.nextLine().toUpperCase().charAt(0);
             if("NESW".contains(String.valueOf(input))){
                 String move = current.getSurroundings().get(input);
@@ -47,6 +53,8 @@ public class GameControl{
                         case "Temple" -> current = map.getTemple();
                         case "Valley" -> current = map.getValley();
                     }
+                    changeStatus(current);
+                    System.out.println(current);
                 }
             }else {
                 if(input=='Q'){
@@ -58,6 +66,34 @@ public class GameControl{
             }
         }
     }
+
+    public static void changeStatus(Area area){ //BOOLEANS AUR VALUES CHANGE KARENGE. AUR TRIGGER KARENGE EVENTS AUR KYA ADD KARNA HAI INVENTORY MEIN
+        if(area instanceof Road road){
+            return;
+        }else if(area instanceof EastForest eastForest){
+            return;
+        }else if(area instanceof SouthHill southHill){
+            return;
+        }else if(area instanceof Valley valley){
+            return;
+        }else if(area instanceof Stream stream){
+            return;
+        }else if(area instanceof WestForest westForest){
+            westForest.enters();
+        }else if(area instanceof Lake lake){
+            return;
+        } else if(area instanceof Temple temple) {
+            temple.npcDialogue();
+        }
+        else{
+
+        }
+    }
+
+    public static void checkStatus(Area area){ //IDHAR BOOLEAN CHECK KARENGE KI AGAR NPC SE MILA TOH HE HE CAN GET SWORD TYPE
+
+    }
+
 
     public static Game startGame(String name){
         return new Game(name);
